@@ -4,8 +4,8 @@ import numpy as np
 import pandas as pd
 
 # 1. Load artifacts (pastikan file ini ada di folder artifacts/)
-scaler = joblib.load("artifacts/preprocessor.pkl")
-model = joblib.load("artifacts/model.pkl")
+scaler = joblib.load("preprocessor.pkl")
+model = joblib.load("model.pkl")
 
 def main():
     st.set_page_config(page_title="Heart Attack Prediction", layout="wide")
@@ -64,4 +64,5 @@ def make_prediction(features):
     return prediction[0]
 
 if __name__ == '__main__':
+
     main()
